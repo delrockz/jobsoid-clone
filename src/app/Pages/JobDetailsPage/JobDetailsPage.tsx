@@ -34,17 +34,19 @@ const JobDetailsPage = () => {
     <>
       <div className='py-8'>
         <div className='w-full xl:w-10/12 2xl:w-9/12 px-6 2xl:px-16 mx-auto'>
-          <p className='font-semibold text-xl my-2'>{jobDetails.department.title} department At Teknorix Systems Goa</p>
-          <p className='font-bold text-3xl my-2'>{jobDetails.title}</p>
+          <p className='font-semibold text-xl my-2'>
+            {jobDetails?.department?.title} department At Teknorix Systems Goa
+          </p>
+          <p className='font-bold text-3xl my-2'>{jobDetails?.title}</p>
           <div className='flex my-2 gap-4 items-center'>
             <div className='flex items-center'>
               <BusinessIcon className='text-gray-500' style={{ fontSize: '16px' }} /> &nbsp;
-              {jobDetails.department.title}
+              {jobDetails?.department?.title}
             </div>
             <div className='flex items-center'>
               <LocationOnIcon className='text-gray-500' style={{ fontSize: '16px' }} />
               &nbsp;
-              {jobDetails.location.title}
+              {jobDetails?.location?.title}
             </div>
             <Tag className='uppercase' fontSize={12} colorScheme={'gray'} width='fit-content' height='fit-content'>
               {jobDetails.type}
